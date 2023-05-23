@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@700&display=swap');
+:root {
+    --cor-primaria:#537188;
+    --cor-secundaria:#EEEEEE;
+    --cor-terciaria:#E1D4BB;
+    --cor-extra:#CBB279;
+
+    --font-primaria:'Sarala', sans-serif;
+    --font-secundaria:'Righteous', cursive;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: radial-gradient(farthest-corner at right top,var(--cor-primaria),var(--cor-secundaria));
+    height: 100%;
+    font-family: var(--font-secundaria);
+}
+
+.conteudo {
+    display: flex;
+    padding: 20vh 3em 0;
+    align-items: flex-start;
+    gap: 5em;
+}
+
+.principal {
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: 500px;
+    padding: 4em 2em 2em;
+    display: flex;
+    background: var(--cor-terciaria);
+    border-radius: 10px;
+    gap: 2em;
+}
+
+.entrada {
+    width: 100%;
+}
+
+.entrada input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.6rem 0 1rem;
+    padding: 1em 0.5em;
+    border-radius: 10px;
+    border: 2px solid var(--cor-extra);
+}
+
+.entrada label {
+    display: block;
+}
+
+.cadastra {
+    background-color: var(--cor-extra);
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.lista {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    list-style: none;
+    padding: 0.6em 2em;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 20px;
+}
+.item strong {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    Background: #D3756B;
+    font-weight: 400;
+}
