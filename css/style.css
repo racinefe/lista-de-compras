@@ -27,13 +27,22 @@ html {
     gap: 5em;
 }
 
+.imagen {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
 .principal {
     box-sizing: border-box;
+    box-shadow: 10px 10px 20px #000000;
+   
     flex-grow: 1;
     flex-basis: auto;
+
     min-width: 500px;
     padding: 4em 2em 2em;
     display: flex;
+
     background: var(--cor-terciaria);
     border-radius: 10px;
     gap: 2em;
@@ -68,25 +77,25 @@ html {
 }
 
 .item {
-    list-style: none;
-    padding: 0.6em 2em;
-    background: #FFFFFF;
-    border-radius: 10px;
-    margin: 0 0 1em;
-    width: 100%;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    gap: 1em;
-    font-size: 20px;
+list-style: none;
+padding: 0.6em 2em;
+background: #FFFFFF;
+border-radius: 10px;
+margin: 0 0 1em;
+width: 100%;
+box-sizing: border-box;
+display: inline-flex;
+align-items: center;
+gap: 1em;
+font-size: 20px;
 }
 .item strong {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    Background: #D3756B;
-    font-weight: 400;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+Background: #D3756B;
+font-weight: 400;
 }
