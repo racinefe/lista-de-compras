@@ -51,19 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
   
       lista.appendChild(novoItem);
     }
-    function calculaTotal () {
-        let total = 0;
-
-        const itens = lista.getElementsByTagName("li");
-
-        for (let i = 0; i < itens.length; i++) {
-            const item = itens[i];
-            const quantidade = parseInt(item.getElementsByTagName("strong")[0].innerHTML);
-            const valor = parseFloat(item.getAttribute("data-valor"));
-            const subtotal = quantidade * valor;
-            total += subtotal;
-        }
-        totalElement.textContent = `Total: R$${total.toFixed(2)}`;
-    }
     
   });
