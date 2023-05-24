@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista De Compras</title>
+
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="js/main.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img src="src/carrinho-de-compras.png" alt="carrinho de Compras" class="imagen">
     <main class="conteudo">
-        <img src="src/carrinho-de-compras.png" alt="carrinho de Compras" class="imagen">
         <div class="principal">
             <form action="" class="entrada" id="novoItens">
                 <label for="item">Nome</label>
@@ -20,12 +23,14 @@
                 <label for="item">Quantidade</label>
                 <input type="number" name="quantidade" id="quantidade">
                 <label for="item">Valor</label>
-                <input type="number" name="valor" id="valor">
+                <input type="number" name="valor" id="valor" step="0.01" placeholder="0.00">
                 <input type="submit" value="adiciona" class="cadastra">
-                <label for="item">Total:</label>
             </form>
+            <div class="total" id="total">Total: R$0.00</div>
         </div>
+       
         <ul class="lista" id="lista"></ul>
+        
     </main>
 </body>
 </html>
