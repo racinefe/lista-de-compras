@@ -58,5 +58,28 @@ document.addEventListener("DOMContentLoaded", () => {
       lista.appendChild(novoItem);
       console.log(novoItem)
     }
+    function calculaTotal () {
+      let total = 0;
+
+      //obtém todos os elementos <li> que estão dentro do elemento lista. 
+      const itens = lista.getElementsByTagName("li");
+
+      for (let i = 0; i < itens.length; i++) {
+          const item = itens[i];
+
+          //obtém o elemento <strong> dentro do item atual e extrai o conteúdo desse elemento como uma string. Essa string é convertida para um número inteiro usando parseInt() e é atribuída à variável quantidade.
+          const quantidade = parseInt(item.getElementsByTagName("strong")[0].innerHTML);
+
+          //obtém o valor do atributo personalizado "data-valor" do item atual, usando o método getAttribute(). O valor é uma string, então é convertido para um número de ponto flutuante usando parseFloat() e atribuído à variável valor.
+          const valor = parseFloat(item.getAttribute("data-valor"));
+
+          //calcula o subtotal do item multiplicando a quantidade pelo valor.
+          const subtotal = quantidade * valor;
+
+          total += subtotal;
+      }
+      //atualiza o conteúdo do elemento identificado por totalElement com o valor total calculado. O método toFixed(2) é usado para formatar o valor com duas casas decimais.
+      totalElement.textContent = `Total: R$${total.toFixed(2)}`;
+  }
     
 });
