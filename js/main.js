@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
      // adiciona o elemento <li> criado à lista existente, que é assumida como uma variável global chamada "lista".
       lista.appendChild(novoItem);
+      console.log(novoItem)
     }
     
 });
