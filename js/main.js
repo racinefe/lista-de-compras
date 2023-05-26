@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       itens.push(itemAtual);
 
       //localStorage.setItem("itens", JSON.stringify(itens)), salva o array itens no armazenamento local do navegador, convertendo-o para uma string JSON.
+      
       localStorage.setItem("itens", JSON.stringify(itens))
   
       nome.value = "";
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       calculaTotal ();
     });
     calculaTotal ();
+
     function criaElemento(item) {
       const novoItem = document.createElement("li");
       novoItem.classList.add("item");
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       novoItem.appendChild(quantidadeItem);
 
       //adiciona o nome do item como conteúdo do elemento <li>. O operador += é usado para concatenar o nome do item ao conteúdo atual do elemento <li>.
-      novoItem.innerHTML += item.nome
+      novoItem.innerHTML += item.nome + " | Unidade - R$:" + item.valor
 
       // adiciona um atributo personalizado chamado "data-valor" ao elemento <li>, com o valor da propriedade valor do objeto item.
       novoItem.setAttribute("data-valor", item.valor);
