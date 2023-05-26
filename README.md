@@ -6,7 +6,7 @@ O projeto utiliza a linguagem JavaScript para manipular o DOM e armazenar os dad
 | -------------  | --- |
 | :sparkles: Nome        | **lista de compras**
 | :label: Tecnologias | <div style="display: inline_block"><br><img align="center" alt="Logo-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"><img align="center" alt="Logo-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"><img align="center" alt="Logo-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"></div>
-| :rocket: URL         | ---------
+| :rocket: URL         | https://lista-de-compras-lemon.vercel.app
 | :fire: Desafio     | Projeto - lista-de-compras
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
