@@ -4,9 +4,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalElement = document.getElementById("total");
     const itens = JSON.parse(localStorage.getItem("itens")) || []
 
+    function atualizaItensCarregados() {
+      const itensCarregados = lista.getElementsByTagName("li");
+    
+      itens.forEach((item) => {
+        const elementoQuantidade = Array.from(itensCarregados).find(
+          (el) => el.querySelector("strong").dataset.id === item.id
+        );
+        if (elementoQuantidade) {
+          elementoQuantidade.querySelector("strong").innerHTML = item.quantidade;
+        }
+      });
+    }
+
     itens.forEach(elemento => {
         criaElemento(elemento)
     });
+    atualizaItensCarregados();
     form.addEventListener("submit", (evento) => {
       evento.preventDefault();
 
@@ -14,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const nome = evento.target.elements["nome"];
       const quantidade = evento.target.elements["quantidade"];
       const valor = evento.target.elements["valor"];
+      const existe = itens.find(elemento => elemento.nome === nome.value)
 
       //criar um objeto chamado itemAtual, contendo as propriedades "nome", "quantidade" e "valor".
       const itemAtual = {
@@ -21,22 +36,31 @@ document.addEventListener("DOMContentLoaded", () => {
         quantidade: quantidade.value,
         valor: valor.value
       };
+      if (existe) {
+        itemAtual.id = existe.id
+        itemAtualizado(itemAtual)
+        itens[itens.findIndex(elemento => elemento.id === existe.id)] = itemAtual
+        calculaTotal ();
+      } else {
+        itemAtual.id = itens[itens.length -1] ? (itens[itens.length-1]).id +1 : 0;
+        //chama a função criaElemento(itemAtual), passando o objeto "itemAtual" como argumento. 
+        criaElemento(itemAtual);
+        //adicionado o  objeto ao array itens.
+        itens.push(itemAtual);
+        calculaTotal ();
+        
 
-      //chama a função criaElemento(itemAtual), passando o objeto "itemAtual" como argumento. 
-      criaElemento(itemAtual);
-
-      //adicionado o  objeto ao array itens.
-      itens.push(itemAtual);
+      }
+      
 
       //localStorage.setItem("itens", JSON.stringify(itens)), salva o array itens no armazenamento local do navegador, convertendo-o para uma string JSON.
-      
       localStorage.setItem("itens", JSON.stringify(itens))
   
-      nome.value = "";
+      nome.value = "" ;
       quantidade.value = "";
       valor.value = "";
 
-      calculaTotal ();
+      
     });
     calculaTotal ();
 
@@ -46,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       const quantidadeItem = document.createElement("strong");
       quantidadeItem.innerHTML = item.quantidade;
+      quantidadeItem.dataset.id = item.id;
 
        //adiciona o elemento <strong> como filho do elemento <li>, para que ele seja exibido dentro do item da lista.
       novoItem.appendChild(quantidadeItem);
@@ -60,7 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
       lista.appendChild(novoItem);
       console.log(novoItem)
     }
-    function calculaTotal () {
+    function itemAtualizado(item) {
+      document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade;
+    }
+    function calculaTotal() {
       let total = 0;
 
       //obtém todos os elementos <li> que estão dentro do elemento lista. 
@@ -83,5 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
       //atualiza o conteúdo do elemento identificado por totalElement com o valor total calculado. O método toFixed(2) é usado para formatar o valor com duas casas decimais.
       totalElement.textContent = `Total: R$${total.toFixed(2)}`;
   }
+  
     
 });
