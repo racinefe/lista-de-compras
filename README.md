@@ -1,6 +1,7 @@
 # lista-de-compras
 
-O projeto utiliza a linguagem JavaScript para manipular o DOM e armazenar os dados localmente no navegador do usuário com o localStorage.
+<p> O projeto utiliza a linguagem JavaScript para manipular o DOM e armazenar os dados localmente no navegador do usuário com o localStorage.
+A lista tambem conta com um controle de responsividade para se adaptar a diversos tamanhos de tela.</p>
 
 |   🪓   |  Comunidade CoDe ❮●/❯e  |
 | -------------  | --- |
@@ -10,7 +11,7 @@ O projeto utiliza a linguagem JavaScript para manipular o DOM e armazenar os dad
 | :fire: Desafio     | Projeto - lista-de-compras
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://cdn.discordapp.com/attachments/1089186196858622065/1111342841654956182/123.png)
+![](https://cdn.discordapp.com/attachments/1089186196858622065/1112396306288234577/12321.png)
 
 
 
@@ -22,20 +23,25 @@ O projeto utiliza a linguagem JavaScript para manipular o DOM e armazenar os dad
 
 <h4>★Campo para adicionar Produtos</h4>
 
-<div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="420" width="500" 
-src="https://cdn.discordapp.com/attachments/1089186196858622065/1111342841654956182/123.png"><img align="center" alt="Projeto - lista-de-compras" height="420" width="500" src="https://cdn.discordapp.com/attachments/1089186196858622065/1111343663398793257/12.png">
+<div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="450" width="400"  src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396305688449034/zcz.png"><img align="center" alt="Projeto - lista-de-compras" height="450" width="500" src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396306971906078/cf3.png">
 </div>
 
 <h4>★Tela com Responsividade</h4>
 
-<div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="620" width="400" 
-src="https://cdn.discordapp.com/attachments/1089186196858622065/1111349010536615936/12321.png"><img align="center" alt="Projeto - lista-de-compras" height="620" width="400" src="https://cdn.discordapp.com/attachments/1089186196858622065/1111349010784071690/12314.png">
+<div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="320" width="600" 
+src="https://cdn.discordapp.com/attachments/1089186196858622065/1112407096256905317/picasion.com_84d040cd720ba3a3af729c1fc4ae7d55.gif"><img align="center" alt="Projeto - lista-de-compras" height="620" width="400" src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396305982046208/zx.png">
 </div>
 
 <h4>★ Área com Total da compra e lista com a quantidade e valor unitario</h4>
 
 <div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="320" width="400" 
-src="https://cdn.discordapp.com/attachments/1089186196858622065/1111352216767451226/656.png"><img align="center" alt="Projeto - lista-de-compras" height="320" width="600" src="https://cdn.discordapp.com/attachments/1089186196858622065/1111352217132335154/363.png">
+src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396305403215942/total.png"><img align="center" alt="Projeto - lista-de-compras" height="320" width="600" src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396306627969145/cf2.png">
+</div>
+
+<h4>★ Lista com Botão para excluir produtos</h4>
+
+<div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="500" width="400" 
+src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396305159962634/delet.png"><img align="center" alt="Projeto - lista-de-compras" height="500" width="600" src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396306971906078/cf3.png">
 </div>
                                                                                                    
 <!--
