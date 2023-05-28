@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@700&display=swap');
 :root {
-    --cor-primaria:#537188;
-    --cor-secundaria:#EEEEEE;
-    --cor-terciaria:#E1D4BB;
-    --cor-extra:#CBB279;
+    --cor-primaria:#27374D;
+    --cor-secundaria:#526D82;
+    --cor-terciaria:#9DB2BF;
+    --cor-extra:#DDE6ED;
 
     --font-primaria:'Sarala', sans-serif;
     --font-secundaria:'Righteous', cursive;
@@ -71,19 +71,27 @@ html {
 }
 
 .cadastra {
-    background-color: var(--cor-extra);
-    color: var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
+    color: #000000;
     cursor: pointer;
+    font-size: 20px;
+}
+.cadastra:hover {
+    background-color:var(--cor-extra);
+    color: #000000;
 }
 
 .total {
     box-sizing: border-box;
     border-radius: 10px;
-    height: 60%;
+    height: 60px;
     width: 100px;
     margin-left: 10px;
-    padding: 0 3px 2px ;
+    padding: 0 9px 2px ;
     Background: var(--cor-extra);
+    display: flex;
+    align-items: center;
+    font-size: large;
 }
 
 .lista {
@@ -95,7 +103,7 @@ html {
 .item {
     list-style: none;
     padding: 0.6em 2em;
-    background: var(--cor-secundaria);
+    background: var(--cor-extra);
     border-radius: 10px;
     margin: 0 0 1em;
     width: 100%;
@@ -112,8 +120,23 @@ html {
     justify-content: center;
     width: 40px;
     height: 40px;
-    Background: var(--cor-extra);
+    Background: var(--cor-secundaria);
     font-weight: 400;
+    font-family: var(--font-secundaria);
+}
+.btnDelet {
+    background-color: var(--cor-secundaria);
+    cursor: pointer;
+    border-radius: 20%;
+    box-shadow: 04px 04px 20px #000000;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    color: #000000;
+}
+button:hover{
+    background-color:var(--cor-extra);
+    color: #f30000;
 }
 
 @media screen and (max-width: 950px) {
@@ -136,5 +159,9 @@ html {
     
         max-width: 70%;
         display: flex;
+    }
+    button:hover{
+        background-color:var(--cor-extra);
+        color: #f30000;
     }
 }

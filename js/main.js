@@ -5,16 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const itens = JSON.parse(localStorage.getItem("itens")) || []
 
     function atualizaItensCarregados() {
-      const itensCarregados = lista.getElementsByTagName("li");
-    
+      while(lista.firstChild){
+        lista.removeChild(lista.firstChild);
+      }
       itens.forEach((item) => {
-        const elementoQuantidade = Array.from(itensCarregados).find(
-          (el) => el.querySelector("strong").dataset.id === item.id
-        );
-        if (elementoQuantidade) {
-          elementoQuantidade.querySelector("strong").innerHTML = item.quantidade;
-        }
-      });
+        criaElemento(item);
+      })
     }
 
     itens.forEach(elemento => {
@@ -81,9 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // adiciona um atributo personalizado chamado "data-valor" ao elemento <li>, com o valor da propriedade valor do objeto item.
       novoItem.setAttribute("data-valor", item.valor);
 
+      novoItem.appendChild(deletBtn(novoItem, item.id))
+
      // adiciona o elemento <li> criado à lista existente, que é assumida como uma variável global chamada "lista".
       lista.appendChild(novoItem);
-      console.log(novoItem)
+      
     }
     function itemAtualizado(item) {
       document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade;
@@ -111,6 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
       //atualiza o conteúdo do elemento identificado por totalElement com o valor total calculado. O método toFixed(2) é usado para formatar o valor com duas casas decimais.
       totalElement.textContent = `Total: R$${total.toFixed(2)}`;
   }
-  
+  function deletBtn(id) {
+    const botaoDelet = document.createElement("button")
+    botaoDelet.innerText = "✘"
+    botaoDelet.classList.add("btnDelet")
+    botaoDelet.addEventListener("click", function(){
+      deletaItem(event.target.parentNode, id);
+    });
+    return botaoDelet;
+  }
+  function deletaItem(item, id) {
+    item.remove();
+    itens.splice(itens.findIndex(elemento => elemento.id === id), 1);
+    localStorage.setItem("itens", JSON.stringify(itens));
+    calculaTotal();
+  }
     
 });
