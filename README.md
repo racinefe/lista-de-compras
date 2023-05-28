@@ -32,7 +32,7 @@ A lista tambem conta com um controle de responsividade para se adaptar a diverso
 src="https://cdn.discordapp.com/attachments/1089186196858622065/1112407096256905317/picasion.com_84d040cd720ba3a3af729c1fc4ae7d55.gif"><img align="center" alt="Projeto - lista-de-compras" height="620" width="400" src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396305982046208/zx.png">
 </div>
 
-<h4>★ Área com Total da compra e lista com a quantidade e valor unitario</h4>
+<h4>★ Área com Total da compra e lista com a quantidade e valor unitário</h4>
 
 <div style="display: inline_block"><br><img align="center" alt="Projeto - lista-de-compras" height="320" width="400" 
 src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396305403215942/total.png"><img align="center" alt="Projeto - lista-de-compras" height="320" width="600" src="https://cdn.discordapp.com/attachments/1089186196858622065/1112396306627969145/cf2.png">
