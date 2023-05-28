@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalElement = document.getElementById("total");
     const itens = JSON.parse(localStorage.getItem("itens")) || []
 
+    //função responsável por atualizar a lista de itens carregados na página.
     function atualizaItensCarregados() {
       while(lista.firstChild){
         lista.removeChild(lista.firstChild);
@@ -109,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //atualiza o conteúdo do elemento identificado por totalElement com o valor total calculado. O método toFixed(2) é usado para formatar o valor com duas casas decimais.
       totalElement.textContent = `Total: R$${total.toFixed(2)}`;
   }
+  // função responsável por criar e retornar um elemento de botão para deletar um item da lista de compras.
   function deletBtn(id) {
     const botaoDelet = document.createElement("button")
     botaoDelet.innerText = "✘"
@@ -118,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     return botaoDelet;
   }
+  //função responsável por excluir um item da lista de compras.
   function deletaItem(item, id) {
     item.remove();
     itens.splice(itens.findIndex(elemento => elemento.id === id), 1);
